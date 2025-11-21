@@ -1,0 +1,11 @@
+What are the things to avoid? check the GPT2 paper....it is in resources section
+BPE can produce different variants of the same word. 
+For instance: dog can be represented differently based on the punctuations at the end. dog., dog!, dog?...and so on....This is the same word dog but based on the special character it paired with...it will be represented in different ways....
+This results in a very sub-optimal allocation of limited vocabulary slots and model capacity..
+*The idea is to use the regex pattern to split the text into list of strings
+*These individual strings are converted into tokens
+*The tokens are then concatenated to form the final list of token ids
+*This basically does not allow merges across the different regex matches
+*Such as space and punctuation at the end of words will not be merged with the word itself
+*Numbers and letters are also not merged together
+*Tokenization works differently for upper and lower case letters 
