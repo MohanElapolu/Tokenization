@@ -4,4 +4,4 @@ Tokenization is a very critical stage in LLM training or inference process. It a
 
 There are several popular tokenization techniques such as byte pairing algorithm and sentencepiece. In addition, tools like tiktoken is also widely used for tokenization. 
 
-Still under progress.....!
+Work under progress.....!
